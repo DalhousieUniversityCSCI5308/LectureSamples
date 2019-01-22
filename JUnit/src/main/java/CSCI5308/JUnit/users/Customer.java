@@ -1,10 +1,10 @@
 package CSCI5308.JUnit.users;
 
-import CSCI5308.JUnit.data.CustomerFactory;
+import CSCI5308.JUnit.data.ICustomerFactory;
 
 //Demo TODO:
 //1 - Generate tests for Customer
-//2 - Mock customer objects loaded from DB.
+//2 - Mock customer objects loaded from DB w/ setup and tear down.
 public class Customer
 {
 	private long id;
@@ -16,7 +16,7 @@ public class Customer
 		contactInfo = new ContactInfo();
 	}
 	
-	public Customer(long id, CustomerFactory factory)
+	public Customer(long id, ICustomerFactory factory)
 	{
 		this.id = id;
 		Customer loadedCustomer = factory.loadCustomer(id);
