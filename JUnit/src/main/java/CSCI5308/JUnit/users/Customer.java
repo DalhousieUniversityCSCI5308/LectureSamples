@@ -20,7 +20,10 @@ public class Customer
 	{
 		this.id = id;
 		Customer loadedCustomer = factory.loadCustomer(id);
-		contactInfo = loadedCustomer.getContactInfo();
+		if (null != loadedCustomer)
+		{
+			contactInfo = loadedCustomer.getContactInfo();
+		}
 	}
 	
 	public long getID()

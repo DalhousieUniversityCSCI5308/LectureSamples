@@ -20,11 +20,14 @@ public class Account
 	}
 	
 	// TODO:  Implement the withdraw method.
-	/*
-	public void withdraw(double amount)
+	public void withdraw(double amount) throws Exception
 	{
+		if (balance < amount)
+		{
+			throw new Exception("Insufficient funds");
+		}
+		balance -= amount;
 	}
-	*/
 	
 	// TODO: Demonstrate implementation of this method
 	/*

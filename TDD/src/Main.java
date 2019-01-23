@@ -6,5 +6,6 @@ public class Main
 	{
 		AccountTest.constructorTest();
 		AccountTest.depositTest();
+		AccountTest.withdrawTest();
 	}
 }
