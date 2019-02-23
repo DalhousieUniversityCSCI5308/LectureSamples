@@ -21,13 +21,18 @@ class ObjectAdapter<T> implements IListInterface
 		adapterObject = new ArrayList<T>();
 	}
 	
-	public void AddToList(Object obj)
+	public void addToList(Object obj)
 	{
 		adapterObject.add((T)obj);
 	}
 
-	public Object GetFromList(int index)
+	public Object getFromList(int index)
 	{
 		return adapterObject.get(index);
-	}	
+	}
+
+	public int count()
+	{
+		return adapterObject.size();
+	}
 }

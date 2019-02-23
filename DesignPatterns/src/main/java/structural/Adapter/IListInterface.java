@@ -2,6 +2,7 @@ package structural.Adapter;
 
 public interface IListInterface
 {
-	public void AddToList(Object obj);
-	public Object GetFromList(int index);
+	public int count();
+	public void addToList(Object obj);
+	public Object getFromList(int index);
 }

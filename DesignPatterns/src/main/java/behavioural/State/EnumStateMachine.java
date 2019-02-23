@@ -41,6 +41,10 @@ public class EnumStateMachine
 					currentState = States.FINISHED;
 					break;
 				}
+				default:
+				{
+					
+				}
 			}
 		}
 	}

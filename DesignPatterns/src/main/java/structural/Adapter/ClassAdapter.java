@@ -11,15 +11,19 @@ import java.util.ArrayList;
 	would then have a choice:  Go change all the code to use ArrayList, or
 	write an adapter class or adapter object.  Here's an adapter class.
 */
-public class ClassAdapter extends ArrayList implements IListInterface
+public class ClassAdapter extends ArrayList<Object> implements IListInterface
 {
-	public void AddToList(Object obj)
+	public void addToList(Object obj)
 	{
 		super.add(obj);
 	}
 
-	public Object GetFromList(int index)
+	public Object getFromList(int index)
 	{
 		return super.get(index);
+	}
+
+	public int count() {
+		return super.size();
 	}	
 }
