@@ -7,7 +7,7 @@ import java.util.ArrayList;
 	Component objects.  Operation() calls are done to every
 	child in the container.
 */
-public class Composite implements Component
+public class Composite extends Component
 {
 	private ArrayList<Component> children;
 
@@ -15,16 +15,16 @@ public class Composite implements Component
 	{
 		children = new ArrayList<Component>();
 	}
-	
+
 	// The Composite operation here iterates through its children calling Operation()
 	// to build a set of results from all its children.
-	public ArrayList<Component> Operation()
+	public ArrayList<Component> operation()
 	{
 		ArrayList<Component> results = new ArrayList<Component>();
 		for (int i = 0; i < children.size(); i++)
 		{
 			Component child = GetChild(i);
-			ArrayList<Component> childResults = child.Operation();
+			ArrayList<Component> childResults = child.operation();
 			if (null != childResults)
 			{
 				results.addAll(childResults);
@@ -33,17 +33,17 @@ public class Composite implements Component
 		return results;
 	}
 
-	public void Add(Component child)
+	public void add(Component child)
 	{
 		children.add(child);
 	}
 
-	public void Remove(Component child)
+	public void remove(Component child)
 	{
 		children.remove(child);
 	}
 
-	public Component GetChild(int index)
+	public Component getChild(int index)
 	{
 		return children.get(index);
 	}
