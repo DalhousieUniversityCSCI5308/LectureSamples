@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SubMenu ID="MainMenu">
+	<Item>
+		<Caption>Latest Recommendations</Caption>
+		<Type>Menu</Type>
+		<SubMenuID>SubMenuFree</SubMenuID>
+		<LoginStatus>LoggedOut</LoginStatus>
+		<Image>Current-issue.png</Image>
+	</Item>
+	<Item>
+		<Caption>Current Issue</Caption>
+		<Type>Issue</Type>
+		<Identifier>08/01/2016</Identifier>
+		<LoginStatus>LoggedIn</LoginStatus>
+		<Image>Current-issue.png</Image>
+		<CaptionSecondLine>August 2016; Vol: 23, No. 8</CaptionSecondLine>
+	</Item>
+	<Item>
+		<Caption>Back Issues</Caption>
+		<Type>Menu</Type>
+		<SubMenuID>SubMenuBackIssues</SubMenuID>
+		<Image>Browse-Category.png</Image>
+	</Item>
+	<Item>
+		<Caption>How to Get CME</Caption>
+		<Type>Other</Type>
+		<Identifier>6</Identifier>
+		<Image>CME.png</Image>
+	</Item>
+	<Item>
+		<Caption>My Account</Caption>
+		<Type>Menu</Type>
+		<LoginStatus>LoggedIn</LoginStatus>
+		<SubMenuID>MyAccount</SubMenuID>
+		<Image>Settings-(My-Account).png</Image>
+	</Item>
+</SubMenu>
