@@ -7,33 +7,35 @@ public class Client
 {
 	private final Component hierarchy;
 	private final Random rand;
-	
+
 	public Client()
 	{
 		hierarchy = new Composite();
 		rand = new Random();
-		AddRandomStuff(hierarchy);
-		ArrayList<Component> leavesWithEvenValues = hierarchy.Operation();
+		addRandomStuff(hierarchy);
+		ArrayList<Component> leavesWithEvenValues = hierarchy.operation();
 		System.out.println("There were " + leavesWithEvenValues.size() + " even value leaves!");
 	}
-	
-	private void AddRandomStuff(Component c)
+
+	private void addRandomStuff(Component c)
 	{
-		AddRandomNumberLeaves(c);
-		for (int i = 0; i < rand.nextInt(); i++)
+		addRandomNumberLeaves(c);
+		int numCompositesToAdd = rand.nextInt();
+		for (int i = 0; i < numCompositesToAdd; i++)
 		{
 			Component child = new Composite();
-			AddRandomStuff(child);
-			c.Add(child);
+			c.add(child);
+			addRandomStuff(child);
 		}
 	}
-	
-	private void AddRandomNumberLeaves(Component c)
+
+	private void addRandomNumberLeaves(Component c)
 	{
-		for (int i = 0; i < rand.nextInt(100); i++)
+		int numLeavesToAdd = rand.nextInt(100);
+		for (int i = 0; i < numLeavesToAdd; i++)
 		{
 			Leaf leaf = new Leaf(rand.nextInt());
-			c.Add(leaf);	
+			c.add(leaf);
 		}
 	}
 }
