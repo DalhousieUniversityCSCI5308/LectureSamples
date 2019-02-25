@@ -11,7 +11,8 @@ public class Main
 {
 	public void main()
 	{
-		AccountsPayable ap = new AccountsPayable();
+		AccountingFactory factory = new AccountingFactory();
+		IAccountsPayable ap = factory.makeAccountsPayable();
 		ap.printCheques();
 	}
 }

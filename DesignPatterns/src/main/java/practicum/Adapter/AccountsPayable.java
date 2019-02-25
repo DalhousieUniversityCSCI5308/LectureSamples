@@ -2,7 +2,7 @@ package practicum.Adapter;
 
 import java.util.*;
 
-public class AccountsPayable
+public class AccountsPayable implements IAccountsPayable
 {
 	List<Object> invoices;
 	
