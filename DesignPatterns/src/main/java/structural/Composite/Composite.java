@@ -23,7 +23,7 @@ public class Composite extends Component
 		ArrayList<Component> results = new ArrayList<Component>();
 		for (int i = 0; i < children.size(); i++)
 		{
-			Component child = GetChild(i);
+			Component child = getChild(i);
 			ArrayList<Component> childResults = child.operation();
 			if (null != childResults)
 			{
