@@ -18,12 +18,12 @@ public class ProxyImage implements IImage
 		realImage = null;
 	}
 
-	public String GetFileName()
+	public String getFileName()
 	{
 		return fileName;
 	}
 
-	public void Display()
+	public void display()
 	{
 		// Now the client wants to display the image, if it hasn't been loaded yet
 		// this is the time when we actually have to do the heavy operation.
@@ -32,6 +32,6 @@ public class ProxyImage implements IImage
 			realImage = new Image(fileName);
 		}
 		// We pass the operation on to the real object.
-		realImage.Display();
+		realImage.display();
 	}
 }

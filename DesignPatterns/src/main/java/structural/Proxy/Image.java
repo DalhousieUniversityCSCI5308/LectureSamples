@@ -13,12 +13,12 @@ public class Image implements IImage
 		// into imageData.
 	}
 	
-	public String GetFileName()
+	public String getFileName()
 	{
 		return fileName;
 	}
 
-	public void Display()
+	public void display()
 	{
 		System.out.println("Very complicated code that displays a large image");
 	}	
