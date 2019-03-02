@@ -2,9 +2,9 @@ package behavioural.ChainOfResponsibility;
 
 public abstract class Logger
 {
-	public static int INFO = 0;	// General informational messages, mostly noise
-	public static int WARN = 1;	// Sometimes semi-important
-	public static int ERROR = 2;	// A very important message, something is wrong
+	public static final int INFO = 0;	// General informational messages, mostly noise
+	public static final int WARN = 1;	// Sometimes important
+	public static final int ERROR = 2;	// A very important message, something is wrong
 	
 	// My personal level of logging.
 	protected int logLevel;
@@ -18,7 +18,7 @@ public abstract class Logger
 		logLevel = level;
 	}
 
-   public void SetNextLogger(Logger nextLogger)
+   public void setNextLogger(Logger nextLogger)
 	{
       this.nextLogger = nextLogger;
    }
@@ -26,20 +26,20 @@ public abstract class Logger
 	// This is the "HandleRequest()" of the loggers, it determines whether
 	// the concrete class should handle the message by logging it in whatever
 	// its concrete way is
-   public void Log(int level, String message)
+   public void log(int level, String message)
 	{
-		// Note tht the Chain of Responsibility STOPS once an object decides
+		// Note that the Chain of Responsibility STOPS once an object decides
 		// to handle the request.
       if (logLevel == level)
 		{
-         LogMessage(message);
+         logMessage(message);
       }
 		else if (null != nextLogger)
 		{
-         nextLogger.Log(level, message);
+         nextLogger.log(level, message);
       }
    }
 	
 	// Actually do the logging work.
-	protected abstract void LogMessage(String message);
+	protected abstract void logMessage(String message);
 }

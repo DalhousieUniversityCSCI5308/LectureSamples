@@ -13,6 +13,6 @@ public abstract class Command
 		this.receiver = receiver;
 	}
 	
-	public abstract void Execute();
-	public abstract void Undo();
+	public abstract void execute();
+	public abstract void undo();
 }

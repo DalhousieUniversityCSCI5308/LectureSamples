@@ -8,10 +8,11 @@ public class Bold extends Command
 	}
 
 	@Override
-	public void Execute()
+	public void execute()
 	{
-		super.Execute();
-		receiver.SetString("<strong>" + receiver.GetString() + "</strong>");
+		// We need to call the super.execute() to create the memento.
+		super.execute();
+		receiver.setString("<strong>" + receiver.getString() + "</strong>");
 	}
 
 	/*   Undo() isn't needed anymore, it's handled by the base class via a memento.

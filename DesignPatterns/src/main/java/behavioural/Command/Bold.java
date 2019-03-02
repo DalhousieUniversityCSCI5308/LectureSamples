@@ -8,13 +8,13 @@ public class Bold extends Command
 	}
 
 	@Override
-	public void Execute()
+	public void execute()
 	{
 		receiver.theString = "<strong>" + receiver.theString + "</strong>";
 	}
 
 	@Override
-	public void Undo()
+	public void undo()
 	{
 		receiver.theString = receiver.theString.substring(8, receiver.theString.length() - 9);
 	}

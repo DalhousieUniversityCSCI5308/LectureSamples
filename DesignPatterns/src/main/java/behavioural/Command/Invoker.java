@@ -1,36 +1,36 @@
 package behavioural.Command;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Invoker
 {
-	private ArrayList<Command> commands;
+	private List<Command> commands;
 	
 	public Invoker()
 	{
 		commands = new ArrayList<Command>();
 	}
 	
-	public void StoreCommand(Command command)
+	public void storeCommand(Command command)
 	{
 		commands.add(command);
 	}
 	
-	public void ProcessCommands()
+	public void processCommands()
 	{
 		for (int i = 0; i < commands.size(); i++)
 		{
 			Command command = commands.get(i);
-			command.Execute();
+			command.execute();
 		}
 	}
 	
-	public void UndoCommands()
+	public void undoCommands()
 	{
 		for (int i = commands.size() - 1; i > -1; i--)
 		{
 			Command command = commands.get(i);
-			command.Undo();
+			command.undo();
 		}
 		commands.clear();
 	}

@@ -6,9 +6,9 @@ public class Client
 	{
 		// These do the same thing, one just does it better.
 		EnumStateMachine enumMachine = new EnumStateMachine();
-		enumMachine.RunStateMachine();
+		enumMachine.runStateMachine();
 		
 		PatternStateMachine patternMachine = new PatternStateMachine();
-		patternMachine.RunStateMachine();
+		patternMachine.runStateMachine();
 	}
 }

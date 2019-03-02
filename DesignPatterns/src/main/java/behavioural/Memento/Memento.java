@@ -9,7 +9,7 @@ public class Memento
 		this.state = state;
 	}
 	
-	public String GetState()
+	public String getState()
 	{
 		return state;
 	}

@@ -7,7 +7,7 @@ public interface IAirport
 		VERTICAL,
 		RUNWAY
 	}
-	public String GetAvailableRunway(LandingMethod type);
-	public void AllocateRunway(String runway);
-	public void ReleaseRunway(String runway);
+	public String getAvailableRunway(LandingMethod type);
+	public void allocateRunway(String runway);
+	public void releaseRunway(String runway);
 }

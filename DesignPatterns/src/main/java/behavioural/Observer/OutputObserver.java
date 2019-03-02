@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 */
 public class OutputObserver implements IObserver
 {
-	public void Update()
+	public void update()
 	{
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
 		LocalDateTime now = LocalDateTime.now();

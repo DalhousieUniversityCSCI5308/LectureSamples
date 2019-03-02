@@ -9,7 +9,7 @@ public class InfoLogger extends Logger
 	}
 
 	@Override
-	protected void LogMessage(String message)
+	protected void logMessage(String message)
 	{
 		// Info messages can just go to System.out
 		System.out.println(message);

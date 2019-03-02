@@ -2,8 +2,9 @@ package behavioural.State;
 
 public class WorkState implements IState
 {
-	public void Handle()
+	public IState handle()
 	{
 		System.out.println("Working state");
+		return new WorkState();
 	}
 }

@@ -11,7 +11,7 @@ public class Client
 		// Add the observer to the subject (subscribe to its notifications)
 		// as soon as we do this it will immediately start getting notified ever
 		// second by the subject.
-		subject.Attach(observer);
+		subject.attach(observer);
 		// Go do something else...
 	}
 }

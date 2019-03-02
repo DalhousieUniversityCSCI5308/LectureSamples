@@ -17,7 +17,7 @@ public class EnumStateMachine
 		currentState = States.START_STATE;
 	}
 	
-	public void RunStateMachine()
+	public void runStateMachine()
 	{
 		while (currentState != States.FINISHED)
 		{
@@ -25,19 +25,19 @@ public class EnumStateMachine
 			{
 				case START_STATE:
 				{
-					DoStartState();
+					doStartState();
 					currentState = States.WORK_STATE;
 					break;
 				}
 				case WORK_STATE:
 				{
-					DoWorkState();
+					doWorkState();
 					currentState = States.END_STATE;
 					break;
 				}
 				case END_STATE:
 				{
-					DoEndState();
+					doEndState();
 					currentState = States.FINISHED;
 					break;
 				}
@@ -49,17 +49,17 @@ public class EnumStateMachine
 		}
 	}
 	
-	private void DoStartState()
+	private void doStartState()
 	{
 		System.out.println("Starting state");
 	}
 	
-	private void DoWorkState()
+	private void doWorkState()
 	{
 		System.out.println("Working state");
 	}
 	
-	private void DoEndState()
+	private void doEndState()
 	{
 		System.out.println("End of state machine");
 	}

@@ -8,13 +8,13 @@ public class Italic extends Command
 	}
 
 	@Override
-	public void Execute()
+	public void execute()
 	{
 		receiver.theString = "<em>" + receiver.theString + "</em>";
 	}
 
 	@Override
-	public void Undo()
+	public void undo()
 	{
 		receiver.theString = receiver.theString.substring(4, receiver.theString.length() - 5);
 	}

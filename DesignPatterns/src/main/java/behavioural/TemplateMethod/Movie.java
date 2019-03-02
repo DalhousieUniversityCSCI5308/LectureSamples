@@ -1,9 +1,9 @@
 package behavioural.TemplateMethod;
 
-import java.util.Comparator;
+import java.lang.Comparable;
 import java.util.List;
 
-public class Movie implements Comparator<Movie>
+public class Movie implements Comparable<Movie>
 {
 	public String title;
 	
@@ -12,19 +12,20 @@ public class Movie implements Comparator<Movie>
 		this.title = title;
 	}
 	
-	// The Comparator interface built into Java provides us a primitive operation
+	// The Comparable interface built into Java provides us a primitive operation
 	// any class can introduce to then make use of existing Java sort algorithms.
 	// Those algorithms are fixed and never change, they are template methods,
-	// no matter what object is passed to them they simply call the compare() 
-	// method on that object knowing it must implement the Comparator interface.
-	public int compare(Movie o1, Movie o2)
+	// no matter what object is passed to them they simply call the compareTo() 
+	// method on that object knowing it must implement the Comparable interface.
+	public int compareTo(Movie o)
 	{
-		return o1.title.compareToIgnoreCase(o2.title);
+		return title.compareToIgnoreCase(o.title);
 	}
 	
-	// Here is a template method.  The method defines an algorithm with a primitive
-	// operation that can be overriden by subclasses to change the behaviour.
-	public static final void SortMovies(List<Movie> movieList)
+	// Here is a template method showing that the Java sort algorithm might look like.
+	// The method defines an algorithm with a primitive operation that can be overridden
+	// by subclasses to change the behaviour.
+	public static final void sortMovies(List<Movie> movieList)
 	{
 		// Crappy bubble sort.
 		for (int i = 0; i < movieList.size(); i++)
@@ -34,8 +35,8 @@ public class Movie implements Comparator<Movie>
 				int indexBeforeJ = j - 1;
 				Movie o1 = movieList.get(indexBeforeJ);
 				Movie o2 = movieList.get(j);
-				// Here's the primitive operation that can be overriden.
-				if (o1.compare(o1, o2) > 0)
+				// Here's the primitive operation that can be overridden.
+				if (o1.compareTo(o2) > 0)
 				{
 					movieList.remove(indexBeforeJ);
 					movieList.add(j, o1);

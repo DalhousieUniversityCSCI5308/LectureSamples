@@ -9,14 +9,14 @@ public class ErrorLogger extends Logger
 	}
 
 	@Override
-	protected void LogMessage(String message)
+	protected void logMessage(String message)
 	{
 		// Error messages go to System.out and send an email to someone to alert them!
 		System.out.println(message);
-		SendEmail(message);
+		sendEmail(message);
 	}
 	
-	private void SendEmail(String message)
+	private void sendEmail(String message)
 	{
 		// Blah blah send an email
 	}

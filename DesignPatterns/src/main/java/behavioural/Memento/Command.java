@@ -17,18 +17,18 @@ public abstract class Command
 		preState = null;
 	}
 	
-	public void Execute()
+	public void execute()
 	{
 		// To support undo I create a memento of the state before executing the command.
-		preState = new Memento(receiver.GetString());
+		preState = new Memento(receiver.getString());
 	}
 	
-	public void Undo()
+	public void undo()
 	{
 		// To perform undo I simply restore from my preState memento.
 		// Every command now can re-use this undo because the actual work the
 		// command does is irrelevant, the memento knows what to save and how
 		// to restore what was saved.
-		receiver.RestoreFromMemento(preState);
+		receiver.restoreFromMemento(preState);
 	}
 }

@@ -6,11 +6,11 @@ public class Client
 	{
 		Invoker invoker = new Invoker();
 		StringContainer container = new StringContainer("a string!");
-		invoker.StoreCommand(new Italic(container));
-		invoker.StoreCommand(new Bold(container));
-		invoker.ProcessCommands();
-		System.out.println(container.GetString()); // outputs "<strong><em>a string!</em></strong>"
+		invoker.storeCommand(new Italic(container));
+		invoker.storeCommand(new Bold(container));
+		invoker.processCommands();
+		System.out.println(container.getString()); // outputs "<strong><em>a string!</em></strong>"
 		invoker.UndoCommands();
-		System.out.println(container.GetString()); // outputs "a string!"
+		System.out.println(container.getString()); // outputs "a string!"
 	}
 }

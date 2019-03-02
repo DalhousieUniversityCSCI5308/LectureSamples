@@ -13,23 +13,23 @@ public class StringContainer
 		theString = value;
 	}
 	
-	public void SetString(String value)
+	public void setString(String value)
 	{
 		theString = value;
 	}
 	
-	public String GetString()
+	public String getString()
 	{
 		return theString;
 	}
 	
-	public Memento GetMemento()
+	public Memento getMemento()
 	{
 		return new Memento(theString);
 	}
 	
-	public void RestoreFromMemento(Memento memento)
+	public void restoreFromMemento(Memento memento)
 	{
-		theString = memento.GetState();
+		theString = memento.getState();
 	}
 }

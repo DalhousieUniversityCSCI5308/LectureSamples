@@ -9,18 +9,18 @@ public class Client
 		// Instantiate two loggers and build a chain, if you wanted to get fancier
 		// you should contain this logic inside a creational pattern like a singleton.
 		logger = new InfoLogger();
-		logger.SetNextLogger(new ErrorLogger());
+		logger.setNextLogger(new ErrorLogger());
 		
-		DoSomethingThatTriggersInfoMessages();
-		DoSomethingThatTriggersErrorMessages();
+		doSomethingThatTriggersInfoMessages();
+		doSomethingThatTriggersErrorMessages();
 	}
 	
-	private void DoSomethingThatTriggersInfoMessages()
+	private void doSomethingThatTriggersInfoMessages()
 	{
-		logger.Log(Logger.INFO, "This is some info!");
+		logger.log(Logger.INFO, "This is some info!");
 	}
 	
-	private void DoSomethingThatTriggersErrorMessages()
+	private void doSomethingThatTriggersErrorMessages()
 	{
 		try
 		{
@@ -31,7 +31,7 @@ public class Client
 		}
 		catch (Exception e)
 		{
-			logger.Log(Logger.ERROR, "ERROR!  Divide by zero in DoSomethingThatTriggersErrorMessages()!");
+			logger.log(Logger.ERROR, "ERROR!  Divide by zero in DoSomethingThatTriggersErrorMessages()!");
 		}
 	}
 }

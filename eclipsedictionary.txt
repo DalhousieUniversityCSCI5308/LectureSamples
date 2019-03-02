@@ -1,0 +1,8 @@
+behaviour
+crappy
+blah
+creational
+runway
+mediator
+runways
+memento

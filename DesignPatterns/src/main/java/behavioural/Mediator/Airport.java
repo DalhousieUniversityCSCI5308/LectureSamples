@@ -25,7 +25,7 @@ public class Airport implements IAirport
 		openLandingPads.add("LandingPad2");
 	}
 	
-	public String GetAvailableRunway(LandingMethod type)
+	public String getAvailableRunway(LandingMethod type)
 	{
 		if (LandingMethod.RUNWAY == type)
 		{
@@ -44,7 +44,7 @@ public class Airport implements IAirport
 		return null;
 	}
 
-	public void AllocateRunway(String runway)
+	public void allocateRunway(String runway)
 	{
 		if (openRunways.contains(runway))
 		{
@@ -58,7 +58,7 @@ public class Airport implements IAirport
 		}
 	}
 
-	public void ReleaseRunway(String runway)
+	public void releaseRunway(String runway)
 	{
 		if (runwaysInUse.contains(runway))
 		{

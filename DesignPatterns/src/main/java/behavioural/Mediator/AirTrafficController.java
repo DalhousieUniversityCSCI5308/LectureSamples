@@ -12,7 +12,7 @@ public class AirTrafficController implements IAirTrafficControllerMediator
 	private final IAirport airport;
 	private final HashMap<IAircraft, String> runwayAssignments;
 	
-	public static AirTrafficController Instance()
+	public static AirTrafficController instance()
 	{
 		// Lazy initialization
 		if (null == theOneATC)
@@ -34,25 +34,25 @@ public class AirTrafficController implements IAirTrafficControllerMediator
 		mediator is talking to, or how the mediator talks to the object that gets
 		the runway for the aircraft.
 	*/
-	public void RequestRunway(IAircraft aircraft)
+	public void requestRunway(IAircraft aircraft)
 	{
 		String runway = null;
-		if (aircraft.IsCapableOfLandingVertically())
+		if (aircraft.isCapableOfLandingVertically())
 		{
-			runway = airport.GetAvailableRunway(IAirport.LandingMethod.VERTICAL);
+			runway = airport.getAvailableRunway(IAirport.LandingMethod.VERTICAL);
 		}
 		else
 		{
-			runway = airport.GetAvailableRunway(IAirport.LandingMethod.RUNWAY);
+			runway = airport.getAvailableRunway(IAirport.LandingMethod.RUNWAY);
 		}
 		if (null == runway)
 		{
-			aircraft.MaintainHoldingPattern();
+			aircraft.maintainHoldingPattern();
 		}
 		else
 		{
 			runwayAssignments.put(aircraft, runway);
-			aircraft.ProceedToRunway(runway);
+			aircraft.proceedToRunway(runway);
 		}
 	}
 
@@ -61,9 +61,9 @@ public class AirTrafficController implements IAirTrafficControllerMediator
 		what that does, it just is being a good aircraft and releasing resources
 		it knows must be needed by other aircraft.
 	*/
-	public void Parked(IAircraft aircraft)
+	public void parked(IAircraft aircraft)
 	{
 		String runway = runwayAssignments.get(aircraft);
-		airport.ReleaseRunway(runway);
+		airport.releaseRunway(runway);
 	}
 }

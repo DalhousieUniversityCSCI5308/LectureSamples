@@ -8,8 +8,8 @@ package behavioural.Mediator;
 public interface IAirTrafficControllerMediator
 {
 	// Request a runway
-	public void RequestRunway(IAircraft aircraft);
+	public void requestRunway(IAircraft aircraft);
 	
 	// Tell the airport that an aircraft has parked.
-	public void Parked(IAircraft aircraft);
+	public void parked(IAircraft aircraft);
 }

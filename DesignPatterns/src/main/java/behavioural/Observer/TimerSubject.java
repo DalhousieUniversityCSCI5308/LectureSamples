@@ -21,18 +21,18 @@ public class TimerSubject implements ISubject
 		{
 			public void actionPerformed(ActionEvent evt)
 			{
-				Notify();
+				notifyObservers();
 			}
 		};
 		new Timer(delay, taskPerformer).start();
 	}
 
-	public void Attach(IObserver observer)
+	public void attach(IObserver observer)
 	{
 		observers.add(observer);
 	}
 
-	public void Detach(IObserver observer)
+	public void detach(IObserver observer)
 	{
 		observers.remove(observer);
 	}
@@ -41,12 +41,12 @@ public class TimerSubject implements ISubject
 		When the subject is notified it must iterate through its observers and
 		send them all the update message.
 	*/
-	public void Notify()
+	public void notifyObservers()
 	{
 		ListIterator<IObserver> iter = observers.listIterator();
 		while (iter.hasNext())
 		{
-			iter.next().Update();
+			iter.next().update();
 		}
 	}
 }

@@ -8,10 +8,11 @@ public class Italic extends Command
 	}
 
 	@Override
-	public void Execute()
+	public void execute()
 	{
-		super.Execute();
-		receiver.SetString("<em>" + receiver.GetString() + "</em>");
+		// We need to call the super.execute() to create the memento.
+		super.execute();
+		receiver.setString("<em>" + receiver.getString() + "</em>");
 	}
 
 	/*   Undo() isn't needed anymore, it's handled by the base class via a memento.
