@@ -1,8 +1,8 @@
 package behavioural.Visitor;
 
-// This is the visitor interface that handles known concrete element classes
+// This is the Visitor interface that handles known concrete element classes
 public interface IDoctorVisitor
 {
-	public void VisitBrokenArmPatient(BrokenArmPatient patient);
-	public void VisitCancerPatient(CancerPatient patient);
+	public void visitBrokenArmPatient(BrokenArmPatient patient);
+	public void visitCancerPatient(CancerPatient patient);
 }

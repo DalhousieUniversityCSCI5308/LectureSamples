@@ -2,7 +2,7 @@ package behavioural.Strategy;
 
 public class ToLowerCaseStrategy implements IStrategy
 {
-	public String DoOperation(String input)
+	public String doOperation(String input)
 	{
 		return input.toLowerCase();
 	}	

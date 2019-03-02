@@ -4,13 +4,16 @@ package behavioural.Visitor;
 // by the visitor object.
 public class CancerPatient implements IPatient
 {
-	public void AdministerChemotherapy()
+	public void administerChemotherapy()
 	{
 		System.out.println("Yay I'm all better!");
 	}
 
-	public void Accept(IDoctorVisitor visitor)
+	public void accept(IDoctorVisitor visitor)
 	{
-		visitor.VisitCancerPatient(this);
+		// Each Concrete Element object must tell the visitor what kind of object it is,
+		// this usually means calling the specific method in the visitor interface associated
+		// to the concrete element.
+		visitor.visitCancerPatient(this);
 	}
 }

@@ -4,13 +4,16 @@ package behavioural.Visitor;
 // by a visitor object.
 public class BrokenArmPatient implements IPatient
 {
-	public void PutArmInCast()
+	public void putArmInCast()
 	{
 		System.out.println("Yay I'm all better!");
 	}
 
-	public void Accept(IDoctorVisitor visitor)
+	public void accept(IDoctorVisitor visitor)
 	{
-		visitor.VisitBrokenArmPatient(this);
+		// Each Concrete Element object must tell the visitor what kind of object it is,
+		// this usually means calling the specific method in the visitor interface associated
+		// to the concrete element.
+		visitor.visitBrokenArmPatient(this);
 	}
 }

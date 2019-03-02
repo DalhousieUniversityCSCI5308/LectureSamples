@@ -9,13 +9,13 @@ public class Context
 		this.strategy = strategy;
 	}
 	
-	public void ChangeStrategy(IStrategy strategy)
+	public void changeStrategy(IStrategy strategy)
 	{
 		this.strategy = strategy;
 	}
 	
-	public String ExecuteStrategy(String input)
+	public String executeStrategy(String input)
 	{
-		return strategy.DoOperation(input);
+		return strategy.doOperation(input);
 	}
 }
