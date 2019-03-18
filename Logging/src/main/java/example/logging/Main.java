@@ -38,8 +38,6 @@ public class Main
 		error.DoSomethingFatal();
 		*/
 		
-		/*
-		
 		Exceptions exception = new Exceptions();
 		exception.doSomething();
 		try
@@ -50,6 +48,5 @@ public class Main
 		{
 			logger.error("doSomething2() error!", ex);
 		}
-		*/
 	}
 }

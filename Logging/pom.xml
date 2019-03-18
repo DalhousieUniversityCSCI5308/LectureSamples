@@ -22,17 +22,5 @@
 			<version>2.11.0</version>
 		</dependency>
 	</dependencies>
-	<!--
-	<build>
-		<resources>
-			 <resource>
-				  <directory>src/main/resources</directory>
-				  <targetPath>${project.build.directory}</targetPath>
-				  <includes>
-						<include>log4j.xml</include>
-				  </includes>
-			 </resource>
-		</resources>
-	</build>
-	-->
+
 </project>
