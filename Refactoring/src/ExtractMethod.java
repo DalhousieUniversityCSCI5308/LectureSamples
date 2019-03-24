@@ -29,7 +29,7 @@ public class ExtractMethod
 		}
 		return null;
 	}
-	public static String decrypt(String toDecrypt, String secret)
+	public String decrypt(String toDecrypt, String secret)
 	{
 		try
 		{
