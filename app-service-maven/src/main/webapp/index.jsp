@@ -9,6 +9,6 @@
   <title>Azure Samples Hello World</title>
 </head>
 <body>
-  <H1>Hello CSCI5308! Tuesday</H1>
+  <H1>Hello CSCI5308! May 14</H1>
 </body>
 </html>
