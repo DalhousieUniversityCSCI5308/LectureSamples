@@ -41,12 +41,12 @@ public class CustomerFactoryMock implements ICustomerFactory
 	}
 	
 	@Override
-	public Customer loadCustomer(long id)
+	public ContactInfo loadCustomerContactInfo(long id)
 	{
 		String idStr = Long.toString(id);
 		if (customers.containsKey(idStr))
 		{
-			return customers.get(idStr);
+			return customers.get(idStr).getContactInfo();
 		}
 		return null;
 	}

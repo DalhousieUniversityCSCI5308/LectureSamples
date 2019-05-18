@@ -1,9 +1,9 @@
 package CSCI5308.JUnit.data;
 
-import CSCI5308.JUnit.users.Customer;
+import CSCI5308.JUnit.users.ContactInfo;
 
 public interface ICustomerFactory
 {
-	public Customer loadCustomer(long id);
+	public ContactInfo loadCustomerContactInfo(long id);
 }
 

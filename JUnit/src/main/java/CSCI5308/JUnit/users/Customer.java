@@ -19,11 +19,7 @@ public class Customer
 	public Customer(long id, ICustomerFactory factory)
 	{
 		this.id = id;
-		Customer loadedCustomer = factory.loadCustomer(id);
-		if (null != loadedCustomer)
-		{
-			contactInfo = loadedCustomer.getContactInfo();
-		}
+		contactInfo = factory.loadCustomerContactInfo(id);
 	}
 	
 	public long getID()

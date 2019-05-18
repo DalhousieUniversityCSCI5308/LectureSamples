@@ -11,6 +11,10 @@ class CustomerTest
 {
 	private static ICustomerFactory factory;
 
+	// This is "setup logic", the @BeforeAll attribute tells JUnit to run this
+	// code before all other tests in this class. Here you can set up any
+	// dependencies your tests need to do their job. If you have slow operations
+	// like instantiating large mock objects, this is the best place to do them.
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception
 	{
