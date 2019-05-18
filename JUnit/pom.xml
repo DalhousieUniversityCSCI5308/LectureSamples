@@ -45,9 +45,7 @@
               <artifactId>maven-surefire-plugin</artifactId>
               <version>2.22.0</version>
               <configuration>
-                  <argLine>
-                      --illegal-access=permit
-                  </argLine>
+                  <argLine>--illegal-access=permit -Xmx1024m -XX:MaxPermSize=256m</argLine>
               </configuration>
           </plugin>
           <plugin>
