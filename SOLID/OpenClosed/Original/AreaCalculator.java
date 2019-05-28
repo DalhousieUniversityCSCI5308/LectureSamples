@@ -1,5 +1,6 @@
 // Example from this website: http://joelabrahamsson.com/a-simple-example-of-the-openclosed-principle/
 
+// This class violates the Open/Closed principle.  Why?
 public class AreaCalculator
 {
 	public static float Area(Rectangle[] shapes)
