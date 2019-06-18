@@ -1,6 +1,5 @@
 package practicum.Composite;
 
-public class Manager implements IEmployee
+public class Manager extends Employee
 {
-
 }

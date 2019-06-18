@@ -1,6 +1,6 @@
 package practicum.Composite;
 
-public class Worker implements IEmployee
+public class Worker extends Employee implements IEmployee
 {
 	private String mySpecialty;
 
@@ -8,12 +8,16 @@ public class Worker implements IEmployee
 	{
 		mySpecialty = specialty;
 	}
-
-	public doWork(String task)
+	
+	@Override
+	public void assignTask(String task)
 	{
+		super.assignTask(task);
+
 		if (task.equals(mySpecialty))
 		{
 			System.out.println("Performing " + task);
-		}
+		}		
 	}
+	
 }
