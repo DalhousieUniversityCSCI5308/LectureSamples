@@ -34,9 +34,10 @@ public class Client
 			ceo.assignTask(task);
 		}
 	}
-	
-	void main()
+
+    public static void main(String[] args) 
 	{
-		doSomething();
+    	Client client = new Client();
+    	client.doSomething();
 	}
 }
