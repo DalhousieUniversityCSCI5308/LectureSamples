@@ -1,3 +1,5 @@
+import externalCode.*;
+
 class Main{
     static int numberOfTries = 0;
     public static void main(String[] args){
