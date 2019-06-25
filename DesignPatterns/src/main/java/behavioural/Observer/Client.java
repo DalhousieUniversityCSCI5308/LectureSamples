@@ -5,7 +5,7 @@ public class Client
 	public Client()
 	{
 		// Create a subject that notifies its observers once per second.
-		ISubject subject = new TimerSubject();
+		Subject subject = new TimerSubject();
 		// Create an observer that outputs the time when notified.
 		IObserver observer = new OutputObserver();
 		// Add the observer to the subject (subscribe to its notifications)
