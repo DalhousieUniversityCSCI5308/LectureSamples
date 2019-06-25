@@ -4,7 +4,7 @@ import java.util.*;
 
 public abstract class Subject
 {
-	private List<IObserver> observers;
+	private final List<IObserver> observers;
 	
 	public Subject()
 	{
