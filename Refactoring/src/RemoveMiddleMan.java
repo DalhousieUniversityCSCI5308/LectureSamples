@@ -30,6 +30,11 @@ public class RemoveMiddleMan
 			this.department = department;
 		}
 		
+		public Department getDepartment()
+		{
+			return department;
+		}
+		
 		// REMOVE MIDDLE MAN
 		// Person is a middle man to the Department class getManager() method.
 		// NOTE:  You only want to use this refactoring when the class that is the
@@ -53,7 +58,7 @@ public class RemoveMiddleMan
 		Department d = new Department(fred);
 		joe.setDepartment(d);
 		// Here the middle man is helping avoid violation of the law of demeter,
-		// observer what happens when we remove the middle man.
+		// observe what happens when we remove the middle man.
 		return joe.getManager();
 	}
 }
